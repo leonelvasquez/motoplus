@@ -43,6 +43,30 @@
                                     </f:facet>
                                 </p:cellEditor>
                             </p:column>
+
+                            <p:column headerText="edad">
+                                <p:cellEditor>
+                                    <f:facet name="output">
+                                        <h:outputText value="#{registro.edad}"/>
+                                    </f:facet>
+                                    <f:facet name="input">
+                                        <p:inputText value="#{registro.edad}" style="width:100%" label="Name"/>
+                                    </f:facet>
+                                </p:cellEditor>
+                            </p:column>
+
+                            <p:column headerText="telefono">
+                                <p:cellEditor>
+                                    <f:facet name="output">
+                                        <h:outputText value="#{registro.telefono}"/>
+                                    </f:facet>
+                                    <f:facet name="input">
+                                        <p:inputText value="#{registro.telefono}" style="width:100%" label="Name"/>
+                                    </f:facet>
+                                </p:cellEditor>
+                            </p:column>
+
+
                             <p:column style="width:6rem">
                                 <p:rowEditor editTitle="Edit Row" cancelTitle="Cancel Edit" saveTitle="Save Row"/>
                             </p:column>
@@ -53,6 +77,13 @@
                     <h:panelGrid id="idPanel" columns="2">
                         <h:outputLabel value="ingresa el nombre"></h:outputLabel>
                         <p:inputText id="idCliente" value="#{cliente.clientes.nombre}"></p:inputText>
+
+                        <h:outputLabel value="ingresa la edad"></h:outputLabel>
+                        <p:inputText id="idEdad" value="#{cliente.clientes.edad}"></p:inputText>
+
+                        <h:outputLabel value="ingresa el télefono"></h:outputLabel>
+                        <p:inputText id="idTelefono" value="#{cliente.clientes.telefono}"></p:inputText>
+
                         <p:commandButton action="#{cliente.crearRegistro()}"
                                          value="Guardar registro"
                                          update=""
@@ -60,7 +91,10 @@
                                          ></p:commandButton>
 
 
+
+
                     </h:panelGrid>
+
                 </h:form>
             </ui:define>
 
