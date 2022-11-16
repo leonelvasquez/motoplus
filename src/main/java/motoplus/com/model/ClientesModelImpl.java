@@ -18,7 +18,7 @@ import org.hibernate.cfg.Configuration;
 public class ClientesModelImpl implements IClientesModel{
     private SessionFactory sf;
     private Session session;
-
+    //prueba
     @Override
     public void insertarRegistro(Clientes cliente) {
     try{
